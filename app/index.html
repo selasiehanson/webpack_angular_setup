@@ -1,0 +1,36 @@
+<!doctype html>  
+<html lang="en">  
+  <head>  
+    <meta charset="UTF-8">
+    <title>Webpack & Angular</title>
+  </head>  
+  <body layout="column" ng-controller="AppCtrl as ap">  
+    <md-toolbar layout="row">
+      <button ng-click="toggleSidenav('left')" hide-gt-sm class="menuBtn">
+        <span class="visuallyhidden">Menu</span>
+      </button>
+      <h1 class="md-toolbar-tools" layout-align-gt-sm="center">Sample App</h1>
+    </md-toolbar>
+
+    <section layout="row" flex>
+      <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+
+      <md-list class="">
+        <md-item ng-repeat="thing in ap.things">
+          <md-item-content>
+          <md-button>  {{ thing.name }}</md-button>
+          </md-item-content>
+        </md-item>
+      </md-list>
+    </md-sidenav>
+     <md-content flex layout-padding> 
+      <div layout="column" layout-fill layout-align="top center">
+        <p>this is the content </p>
+      </div>
+     </md-content>
+    </section>
+
+
+    <script src="bundle.js"></script>  
+  </body>  
+</html>  

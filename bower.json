@@ -1,0 +1,19 @@
+{
+  "name": "cold_inventory_client",
+  "version": "0.0.0",
+  "authors": [
+    "selasiehanson <soundfever18@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "~0.8.3"
+  }
+}
